@@ -1,3 +1,22 @@
+package.json
+npm install react-router-dom framer-motion lucide-react
+npm install -D tailwindcss postcss autoprefixer
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        gold: "#FFD700",
+      },
+    },
+  },
+  plugins: [],
+};
+vite.cobfig.js
+export default {
+  base: "/dealswithdiscount.in/",
+}
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,4 +52,4 @@
   <body>
     <div id="root"></div>
   </body>
-    </html>
+</html>
