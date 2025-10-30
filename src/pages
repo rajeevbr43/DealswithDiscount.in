@@ -1,0 +1,91 @@
+import React from "react";
+
+export default function Home() {
+  return (
+    <div className="text-center py-16 bg-gradient-to-b from-black to-gray-900 min-h-screen">
+      <h1 className="text-5xl font-bold text-yellow-400 mb-6">
+        Welcome to Deals With Discount 🔥
+      </h1>
+      <p className="text-gray-300 text-lg max-w-xl mx-auto">
+        Find the best Flipkart & Meesho offers in one place. 
+        Save money, shop smart, and stay updated with daily deals!
+      </p>
+      <button className="mt-8 px-6 py-3 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 transition">
+        Explore Offers
+      </button>
+    </div>
+  );
+}
+import React from "react";
+
+export default function Products() {
+  const products = [
+    { name: "Smartwatch", price: "₹1,499", site: "Flipkart" },
+    { name: "Wireless Earbuds", price: "₹999", site: "Meesho" },
+    { name: "Bluetooth Speaker", price: "₹1,299", site: "Flipkart" },
+  ];
+
+  return (
+    <div className="bg-black min-h-screen text-white py-12">
+      <h2 className="text-center text-4xl font-bold text-yellow-400 mb-8">🔥 Top Deals</h2>
+      <div className="grid md:grid-cols-3 gap-8 px-8">
+        {products.map((p, index) => (
+          <div key={index} className="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+            <h3 className="text-2xl font-semibold mb-2">{p.name}</h3>
+            <p className="text-yellow-400 mb-2">Price: {p.price}</p>
+            <p className="text-gray-400">Site: {p.site}</p>
+            <button className="mt-4 w-full py-2 bg-yellow-400 text-black rounded font-medium hover:bg-yellow-300">
+              View Deal
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+import React from "react";
+
+export default function About() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-200 flex flex-col items-center justify-center text-center px-6">
+      <h2 className="text-4xl font-bold text-yellow-400 mb-4">About Us</h2>
+      <p className="max-w-2xl text-lg">
+        Deals With Discount is your one-stop destination to find the hottest deals and discounts 
+        from Flipkart and Meesho. Our goal is simple — help you save time and money by 
+        bringing trending offers directly to you.
+      </p>
+    </div>
+  );
+}
+import React from "react";
+
+export default function Contact() {
+  return (
+    <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-6">
+      <h2 className="text-4xl font-bold text-yellow-400 mb-6">Contact Us</h2>
+      <p className="text-gray-300 text-lg mb-4">
+        Have questions or want to collaborate? We’d love to hear from you!
+      </p>
+      <form className="bg-gray-900 p-8 rounded-xl shadow-lg w-full max-w-md">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full mb-4 p-3 rounded bg-gray-800 text-white focus:outline-none"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full mb-4 p-3 rounded bg-gray-800 text-white focus:outline-none"
+        />
+        <textarea
+          placeholder="Your Message"
+          rows="4"
+          className="w-full mb-4 p-3 rounded bg-gray-800 text-white focus:outline-none"
+        ></textarea>
+        <button className="w-full py-3 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  );
+}
